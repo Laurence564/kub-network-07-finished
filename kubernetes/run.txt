@@ -1,6 +1,14 @@
+---- Minikube ----
+
+minikube start --driver=docker
+
 ---- Add auth ----
 
 kubectl apply -f auth-deployment -f auth-service
+
+kubectl get deployments
+
+kubectl get services
 
 ---- Add users ----
 
