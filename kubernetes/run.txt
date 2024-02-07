@@ -4,7 +4,7 @@ minikube start --driver=docker
 
 ---- Add auth ----
 
-kubectl apply -f auth-deployment -f auth-service
+kubectl apply -f auth-deployment.yaml -f auth-service.yaml
 
 kubectl get deployments
 
@@ -12,12 +12,16 @@ kubectl get services
 
 ---- Add users ----
 
-kubectl apply -f users-deployment -f users-service
+kubectl apply -f users-deployment.yaml -f users-service.yaml
 
 ---- Add tasks ----
 
-kubectl apply -f tasks-deployment -f tasks-service
+kubectl apply -f tasks-deployment.yaml -f tasks-service.yaml
 
 ---- Add front end ----
 
-kubectl apply -f frontend-deployment -f frontend-service
+kubectl apply -f frontend-deployment.yaml -f frontend-service.yaml
+
+---- Start the services ----
+
+minikube service frontend-service
