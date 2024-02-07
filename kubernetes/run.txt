@@ -1,0 +1,15 @@
+---- Add auth ----
+
+kubectl apply -f auth-deployment -f auth-service
+
+---- Add users ----
+
+kubectl apply -f users-deployment -f users-service
+
+---- Add tasks ----
+
+kubectl apply -f tasks-deployment -f tasks-service
+
+---- Add front end ----
+
+kubectl apply -f frontend-deployment -f frontend-service
